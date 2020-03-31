@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "A middy middleware to report errors to Sentry.",
   "files": [
-    "dist",
     "src"
   ],
-  "main": "./dist/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "jest"
   },
