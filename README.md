@@ -27,4 +27,4 @@ const handler = middy(yourHandler)
 module.exports = { handler };
 ```
 
-The options you are passing correspond the the [Sentry init options](https://docs.sentry.io/error-reporting/configuration/?platform=node).
+The options you are passing correspond to the [Sentry init options](https://docs.sentry.io/error-reporting/configuration/?platform=node).
