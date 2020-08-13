@@ -2,7 +2,7 @@ const Sentry = require('@sentry/node');
 
 module.exports = (sentryOptions) => ({
   onError(handler, next) {
-    if (!handler.error.statusCode) {
+    if (!handler.error.statusCode || handler.error.statusCode >= 500) {
       Sentry.init(sentryOptions);
 
       Sentry.configureScope((scope) => {
