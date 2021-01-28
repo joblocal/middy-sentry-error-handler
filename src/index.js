@@ -12,7 +12,7 @@ module.exports = (sentryOptions) => ({
 
       Sentry.captureException(handler.error);
 
-      console.error(handler.error);
+      console.log(handler.error);
 
       handler.error = new createError.InternalServerError();
     }

@@ -2,7 +2,7 @@ const Sentry = require('@sentry/node');
 const sentryErrorHandler = require('./');
 
 jest.mock('@sentry/node');
-console.error = jest.fn();
+console.log = jest.fn();
 
 beforeEach(() => {
   Sentry.init = jest.fn();
