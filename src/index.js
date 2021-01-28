@@ -1,4 +1,5 @@
 const Sentry = require('@sentry/node');
+const createError = require('http-errors');
 
 module.exports = (sentryOptions) => ({
   onError(handler, next) {
@@ -12,6 +13,8 @@ module.exports = (sentryOptions) => ({
       Sentry.captureException(handler.error);
 
       console.error(handler.error);
+
+      handler.error = new createError.InternalServerError();
     }
 
     return next();

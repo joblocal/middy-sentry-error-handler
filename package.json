@@ -15,6 +15,7 @@
     "jest": "^25.2.4"
   },
   "dependencies": {
-    "@sentry/node": "^5.15.4"
+    "@sentry/node": "^5.15.4",
+    "http-errors": "^1.8.0"
   }
 }
