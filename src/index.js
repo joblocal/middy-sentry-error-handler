@@ -7,6 +7,12 @@ module.exports = (sentryOptions) => ({
 
       Sentry.configureScope((scope) => {
         scope.setExtra('event', handler.event);
+        if (handler.error.payload) {
+          scope.setExtra('payload', handler.error.payload);
+        }
+        if (handler.error.handler) {
+          scope.setExtra('handler', handler.error.handler);
+        }
       });
 
       Sentry.captureException(handler.error);
