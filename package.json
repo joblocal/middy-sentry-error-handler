@@ -1,6 +1,6 @@
 {
   "name": "@joblocal/middy-sentry-error-handler",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A middy middleware to report errors to Sentry.",
   "files": [
     "src"
